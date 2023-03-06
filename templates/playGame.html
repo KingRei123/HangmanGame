@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>{{username}} - Hangman Games</title>
+{% endblock %}
+{% block body %}
+<form action="{{url_for('play', username=username)}}" method="POST">
+    <label for="">Answer</label>
+    <input type="text" name="answer">
+    <input type="submit">
+</form>
+
+{% endblock %}
