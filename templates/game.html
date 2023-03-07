@@ -1,33 +1,29 @@
 {% extends 'base.html' %} {% block title %}
 
 <title>Play - Hangman</title>
-<script
-  src="https://code.jquery.com/jquery-3.6.3.js"
-  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-  crossorigin="anonymous"
-></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
 
 {% endblock %} {% block body %}
 <div class="wrapper">
-  <div class="container">
-    <div class="mt-5">
-      <p>Hangman Games</p>
-    </div>
-  </div>
-  <div class="wrapper">
-    <div id="buttons"></div>
-    <p id="catagoryName"></p>
-    <div id="hold"></div>
-    <p id="mylives"></p>
-    <p id="clue">Clue -</p>
-    <canvas id="stickman"
-      >This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas
-    >
     <div class="container">
-      <button id="hint">Hint</button>
-      <button id="reset">Play again</button>
+        <div class="mt-5">
+            <p>Hangman Games</p>
+        </div>
     </div>
-  </div>
+    <div class="wrapper">
+        <div id="buttons"></div>
+        <p id="catagoryName"></p>
+        <div id="hold"></div>
+        <p id="mylives"></p>
+        <p id="clue">Clue -</p>
+        <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+        <div class="container">
+            <button id="hint">Hint</button>
+            <button id="reset">Play again</button>
+            <button id="home"><a href="/">Home</a></button>
+        </div>
+    </div>
 </div>
 
 <script src="{{url_for('static', filename='game.js')}}"></script>

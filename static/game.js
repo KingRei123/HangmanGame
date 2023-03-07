@@ -3,18 +3,44 @@ window.onload = function () {
     var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    var hints = [
-            // Animal Hints
-            ["Big grey animal with long nose", "Black and white horses", "Small modern T-Rex", "1890's car", "Giant great white"],
-            // Food Hinst
-            ["Indonesian intans noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish"]
-        ];
-    var categories = [
-          // Animal Category
-          ["elephant", "zebra", "chicken", "horse", "shark"],
-          // Food Category
-          ["indomie", "pizza", "ramen", "samyang", "salad"]
-      ];
+    
+    // question object     
+    let question = {
+      hints: [
+        // Animal Hints
+        ["Big grey animal with long nose", "Black and white horses", "Small modern T-Rex", "1890's car", "Giant great white"],
+        // Food Hinst
+        ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish"]
+      ],
+
+      categories: [
+         // Animal Category
+         ["elephant", "zebra", "chicken", "horse", "shark"],
+         // Food Category
+         ["indomie", "pizza", "ramen", "samyang", "salad"]
+      ],
+
+      get_hints: function(i) {
+        return hints[i]
+      },
+
+
+      get_categories: function(i) {
+        return categories[i]
+      }
+
+    }
+    // player object
+    let player = {
+      lives: 10,
+      gender: ['Male', 'Female'],
+
+      get_lives: function(){
+        return lives
+      }
+
+    }
+    
   
     
     var categories;         // Array of topics
@@ -27,6 +53,9 @@ window.onload = function () {
     var counter ;           // Count correct geusses
     var space;
     var checkWin = false;              // Number of spaces in word '-'
+
+    
+
   
     // Get elements
     var showLives = document.getElementById("mylives");
@@ -55,9 +84,9 @@ window.onload = function () {
     
     // Select Catagory
     var selectCat = function () {
-      if (chosenCategory === categories[0]) {
+      if (chosenCategory === question.categories[0]) {
         catagoryName.innerHTML = "The Chosen Category Is Animals";
-      } else if (chosenCategory === categories[1]) {
+      } else if (chosenCategory === question.categories[1]) {
         catagoryName.innerHTML = "The Chosen Category Is Food";
       }
     }
@@ -86,8 +115,8 @@ window.onload = function () {
     
     // Show lives
      comments = function () {
-      showLives.innerHTML = "You have " + lives + " lives";
-      if (lives < 1) {
+      showLives.innerHTML = "You have " + player.lives + " lives";
+      if (player.get_lives() < 1) {
         showLives.innerHTML = "Game Over";
         checkWin = false;
       }
@@ -101,7 +130,7 @@ window.onload = function () {
   
         // Animate man
     var animate = function () {
-      var drawMe = lives ;
+      var drawMe = player.lives ;
       drawArray[drawMe]();
     }
   
@@ -173,7 +202,7 @@ window.onload = function () {
     // OnClick Function
      check = function () {
       list.onclick = function () {
-        if (lives < 1) {
+        if (player.lives < 1) {
          
       } else {
         var geuss = (this.innerHTML);
@@ -187,7 +216,7 @@ window.onload = function () {
         }
         var j = (word.indexOf(geuss));
         if (j === -1) {
-          lives -= 1;
+          player.lives -= 1;
           comments();
           animate();
         } else {
@@ -200,17 +229,17 @@ window.onload = function () {
         
     
       
-    // Play
+    // Play Game
     play = function () {
       
-      chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+      chosenCategory = question.categories[Math.floor(Math.random() * question.categories.length)];
       word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
       word = word.replace(/\s/g, "-");
       console.log(word);
       buttons();
-  
+      player.lives = 10;
+      lives = player.lives;
       geusses = [ ];
-      lives = 10;
       counter = 0;
       space = 0;
       result();
@@ -227,9 +256,9 @@ window.onload = function () {
   
         
   
-      var catagoryIndex = categories.indexOf(chosenCategory);
+      var catagoryIndex = question.categories.indexOf(chosenCategory);
       var hintIndex = chosenCategory.indexOf(word);
-      showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+      showClue.innerHTML = "Clue: - " + question.hints[catagoryIndex][hintIndex];
     };
   
      // Reset
