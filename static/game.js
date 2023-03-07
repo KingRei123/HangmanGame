@@ -64,7 +64,7 @@ window.onload = function () {
     var lives ;             // Lives
     var counter ;           // Count correct geusses
     var space;
-    var checkWin = false;              // Number of spaces in word '-'
+    var checkWin;              // Number of spaces in word '-'
 
     
 
@@ -128,9 +128,10 @@ window.onload = function () {
     // Show lives
      comments = function () {
       showLives.innerHTML = "You have " + player.lives + " lives";
-      if (player.get_lives() < 1) {
+      if (player.lives < 1) {
         showLives.innerHTML = "Game Over";
         checkWin = false;
+        
       }
       for (var i = 0; i < geusses.length; i++) {
         if (counter + space === geusses.length) {
@@ -215,6 +216,7 @@ window.onload = function () {
      check = function () {
       list.onclick = function () {
         if (player.lives < 1) {
+          guess.remove()
          
       } else {
         var geuss = (this.innerHTML);
@@ -231,6 +233,7 @@ window.onload = function () {
           player.lives -= 1;
           comments();
           animate();
+          
         } else {
           comments();
         }
@@ -245,20 +248,41 @@ window.onload = function () {
     play = function () {
       
       chosenCategory = question.categories[Math.floor(Math.random() * question.categories.length)];
-      word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+      word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)]; // result
       word = word.replace(/\s/g, "-");
       console.log(word);
       var playerNameInput = document.getElementById('playerName').value
       player.set_username = playerNameInput
       buttons();
-      player.lives = 10;
+      player.lives = 2;
       userename = player.userename
       console.log(userename)
       lives = player.lives;
-      geusses = [ ];
+      geusses = [  ];
       counter = 0;
       space = 0;
-      result();
+      wordHolder = document.getElementById('hold');
+      correct = document.createElement('ul');
+      
+    
+        for (var i = 0; i < word.length; i++) {
+          correct.setAttribute('id', 'my-word');
+          guess = document.createElement('li');
+          guess.setAttribute('class', 'guess');
+          
+         
+          if (word[i] === "-") {
+            guess.innerHTML = "-";
+            space = 1;
+          } else {
+            guess.innerHTML = "_";
+          }
+    
+          geusses.push(guess);
+          wordHolder.appendChild(correct);
+          correct.appendChild(guess);
+        }
+      check()
       comments();
       selectCat();
       canvas();
