@@ -19,19 +19,20 @@ def index():
 
 @app.route('/game', methods = ['POST','GET'])
 def game():
-    if request.method == 'POST':  
+    if request.method == 'POST':
         username = request.form['username']
-        choosenWords = request.form['guess']
-        return redirect(url_for('play', username=username, choosenWords=choosenWords))
-    return render_template('game.html')
+        return redirect(url_for('play', username=username))
+    return render_template('charSelect.html')
+
+@app.route('/game/<username>', methods=['POST', 'GET'])
+def play(username):
+    if username == None:
+        return render_template('charSelect.html')
+    return render_template('game.html', username=username)
+    
 
 
-@app.route('/playgame/<username>/<choosenWords>', methods=['POST', 'GET'])
-def play(username, choosenWords):
-    lengh_answer = int(len(choosenWords))
-    if lengh_answer == 0:
-        return "Error"
-    return render_template('playGame.html', username=username, lengh_answer=lengh_answer, choosenWords=choosenWords)
+    
 
 
 @app.route('/about')

@@ -32,12 +32,24 @@ window.onload = function () {
     }
     // player object
     let player = {
+      userename: null,
       lives: 10,
       gender: ['Male', 'Female'],
 
       get_lives: function(){
         return lives
+      },
+
+      get_gender: function(){
+        return this.gender
+      },
+      set set_username(ourName) {
+        this.userename = ourName
+      },
+      set set_gender(gender) {
+        this.gender = gender
       }
+
 
     }
     
@@ -236,8 +248,12 @@ window.onload = function () {
       word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
       word = word.replace(/\s/g, "-");
       console.log(word);
+      var playerNameInput = document.getElementById('playerName').value
+      player.set_username = playerNameInput
       buttons();
       player.lives = 10;
+      userename = player.userename
+      console.log(userename)
       lives = player.lives;
       geusses = [ ];
       counter = 0;
@@ -251,11 +267,7 @@ window.onload = function () {
     play();
     
     // Hint
-  
       hint.onclick = function() {
-  
-        
-  
       var catagoryIndex = question.categories.indexOf(chosenCategory);
       var hintIndex = chosenCategory.indexOf(word);
       showClue.innerHTML = "Clue: - " + question.hints[catagoryIndex][hintIndex];

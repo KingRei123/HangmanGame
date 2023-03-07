@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Select Character - Hangman</title>
+
+{% endblock %}
+{% block body %}
+<div class="container">
+    <form action="" method="POST">
+        <div class="row">
+            <div class="col">
+                <label for="">Name: </label>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="username">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <label for="">Character Type: </label>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="/static/assets/male.jpeg" alt="Male" style="width: 180px; height: 200px;">
+                        <input type="radio" name="gender" value="Male">
+
+                    </div>
+                    <div class="col">
+                        <img src="/static/assets/female.jpeg" alt="Female" style="width: 180px; height:200px;">
+                        <input type="radio" name="gender" value="Female">
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <input type="submit" class="btn btn-success" value="Submit">
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+
+</div>
+
+{% endblock %}
