@@ -1,12 +1,30 @@
-{% extends 'base.html' %}
-{% block title %}
+{% extends 'base.html' %} {% block title %}
 <title>{{username}} - Hangman Games</title>
-{% endblock %}
-{% block body %}
-<form action="{{url_for('play', username=username)}}" method="POST">
-    <label for="">Answer</label>
-    <input type="text" name="answer">
-    <input type="submit">
-</form>
+{% endblock %} {% block body %}
 
+<input type="number" value="{{lengh_answer}}" id="lenAnswer" />
+<input type="text" value="{{choosenWords}}" id="question" />
+
+<div class="container mt-5">
+  <div class="container">
+    <img src="/static/assets/picture_title.png" alt="" />
+  </div>
+  <div class="container">
+    <input type="text" maxlength="{{lengh_answer}}" class="form-control" id="answer" />
+  </div>
+  <div class="container border">
+    <button id="Q_KEY">Q</button>
+    <button id="W_KEY">W</button>
+    <button id="E_KEY">E</button>
+    <button id="R_KEY">R</button>
+    <button id="T_KEY">T</button>
+    <button id="Y_KEY">Y</button>
+  </div>
+  <div class="container">
+    <button id="submit">Submit</button>
+  </div>
+</div>
+
+<button id="test">printTest</button>
+<script src="/static/keyboard.js"></script>
 {% endblock %}
