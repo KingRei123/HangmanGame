@@ -143,13 +143,22 @@ window.onload = function () {
          p.classList.add('p_answer')
         
          ul.appendChild(p)
+         removeKeyboard();
+
       }
       // show lives
       for (var i = 0; i < geusses.length; i++) {
         if (counter + space === geusses.length) {
           showLives.innerHTML = "You Win!";
           checkWin = true;
-        }
+          removeKeyboard();
+          
+          
+       } else {
+        
+       }
+
+      
       }
     }
   
@@ -244,11 +253,9 @@ window.onload = function () {
         if (j === -1) {
           player.lives -= 1;
           comments();
-          animate();
-          
-          
+          animate();          
         } else {
-          comments();
+          comments()
         }
 
       }
@@ -308,12 +315,12 @@ window.onload = function () {
           wordHolder.appendChild(correct);
           correct.appendChild(guess);
         }
-      check()
+      check();
       comments();
       selectCat();
       canvas();
     }
-  
+    
     play();
     
     // Hint
@@ -332,6 +339,13 @@ window.onload = function () {
       context.clearRect(0, 0, 400, 400);
       play();
     }
+
+    removeKeyboard = function (){
+      for (var i = 0; i < alphabet.length; i++) {
+        letters.removeChild(letters.firstElementChild)
+      }
+
+    }
   }
 
   // Home Button
@@ -339,6 +353,8 @@ window.onload = function () {
     var url = '/'
     window.location.replace(url)
   }
+
+
 
  
 
