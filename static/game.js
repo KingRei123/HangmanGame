@@ -131,8 +131,20 @@ window.onload = function () {
       if (player.lives < 1) {
         showLives.innerHTML = "Game Over";
         checkWin = false;
+         for (var i = 0; i < word.length; i++) {
+           correct.removeChild(correct.firstElementChild)
         
+         }
+         var ul = document.getElementById('my-word')
+
+         var p = document.createElement('p')
+         var node = document.createTextNode(word)
+         p.appendChild(node)
+         p.classList.add('p_answer')
+        
+         ul.appendChild(p)
       }
+      // show lives
       for (var i = 0; i < geusses.length; i++) {
         if (counter + space === geusses.length) {
           showLives.innerHTML = "You Win!";
@@ -234,6 +246,7 @@ window.onload = function () {
           comments();
           animate();
           
+          
         } else {
           comments();
         }
@@ -254,7 +267,7 @@ window.onload = function () {
       var playerNameInput = document.getElementById('playerName').value
       player.set_username = playerNameInput
       buttons();
-      player.lives = 2;
+      player.lives = 10; // Player lives
       userename = player.userename
       console.log(userename)
       lives = player.lives;
@@ -263,14 +276,11 @@ window.onload = function () {
       space = 0;
       wordHolder = document.getElementById('hold');
       correct = document.createElement('ul');
-      
-    
         for (var i = 0; i < word.length; i++) {
           correct.setAttribute('id', 'my-word');
           guess = document.createElement('li');
           guess.setAttribute('class', 'guess');
           
-         
           if (word[i] === "-") {
             guess.innerHTML = "-";
             space = 1;
@@ -307,4 +317,12 @@ window.onload = function () {
       play();
     }
   }
+
+  // Home Button
+  var home = document.getElementById('home').onclick = function() {
+    var url = '/'
+    window.location.replace(url)
+  }
+
+ 
 

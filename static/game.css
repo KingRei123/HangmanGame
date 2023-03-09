@@ -132,6 +132,9 @@ button:hover {
   border: solid 1px #fff;
   color: #1bbce4;
 }
+a {
+  color: white;
+}
 @media (max-width: 767px) {
   #alphabet {
     padding: 0 0 0 15px;
@@ -141,4 +144,14 @@ button:hover {
   #alphabet {
     padding: 0 0 0 25px;
   }
+}
+
+
+.p_answer {
+  color: red;
+  padding: 2px;
+  font-weight: bold;
+  
+
+
 }

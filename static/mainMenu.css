@@ -10,6 +10,9 @@
     transition: background-color 0.3s ease;
   }
   
+  body {
+    background: #0584ec;
+  }
   .button:hover {
     background-color: #3e8e41;
   }
