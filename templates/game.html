@@ -36,5 +36,8 @@
     </div>
 
     <script src="{{url_for('static', filename='game.js')}}"></script>
+    <!-- This is to send it to Javascript -->
+    <input type="number" name="lives" id="lives" value="{{lives}}" hidden />
+    <input type="number" name="categories" id="categories" value="{{categories}}" hidden />
   </body>
 </html>

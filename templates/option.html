@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %}
+<title>Option - Hangman Games</title>
+
+{% endblock %} {% block body %}
+
+<div class="container border">
+  <form action="" method="post">
+    <div class="row p-3">
+      <div class="col">
+        <label for="">Number lives: </label>
+      </div>
+      <div class="col"><input type="number" name="lives" class="form-control" value="10" /></div>
+    </div>
+    <select class="form-select mt-3 mb-3" aria-label=" Default select example" name="categories">
+      <option selected>Change Categories</option>
+      <option value="0">Animal</option>
+      <option value="1">Food</option>
+      <option value="2">Random</option>
+    </select>
+    <div class="text-center p-3">
+      <input type="submit" value="Set" class="btn btn-warning" />
+    </div>
+  </form>
+</div>
+
+{% endblock %}

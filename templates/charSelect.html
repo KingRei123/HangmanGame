@@ -12,7 +12,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="username">
+                        <input type="text" name="username" required>
 
 
                     </div>
@@ -56,6 +56,13 @@
             </div>
 
         </div>
+        <input type="number" name="lives" value="{{lives}}" id="lives" hidden>
+        {% if categories %}
+            <input type="number" name="categories" value="{{categories}}">
+        {% else %}
+        <input type="number" name="categories" value="3">
+
+        {% endif %}
     </form>
 
 

@@ -9,7 +9,6 @@ app.debug = True
 
 toolbar = DebugToolbarExtension(app)
 
-words = ['test', 'rei']
 
 
 @app.route('/', methods=['POST','GET'])
@@ -19,16 +18,32 @@ def index():
 
 @app.route('/game', methods = ['POST','GET'])
 def game():
+    lives = request.args.get('lives')
+    categories = request.args.get('categories')
     if request.method == 'POST':
+        lives = request.form['lives']
         username = request.form['username']
-        return redirect(url_for('play', username=username))
-    return render_template('charSelect.html')
+        categories = request.form['categories']
+        return redirect(url_for('play', username=username,lives=lives, categories=categories))
+    return render_template('charSelect.html', lives=lives, categories=categories)
 
 @app.route('/game/<username>', methods=['POST', 'GET'])
 def play(username):
+    lives = request.args.get('lives')
+    categories = request.args.get('categories')
     if username == None:
         return render_template('charSelect.html')
-    return render_template('game.html', username=username)
+    return render_template('game.html', username=username, lives=lives, categories=categories)
+
+@app.route('/option', methods=['POST','GET'])
+def option():
+    if request.method == 'POST':
+        lives = request.form['lives']
+        categories = request.form['categories']
+        return redirect(url_for('game', lives=lives, categories=categories))
+        
+
+    return render_template('option.html')
     
 
 

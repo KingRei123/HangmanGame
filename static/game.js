@@ -259,15 +259,31 @@ window.onload = function () {
       
     // Play Game
     play = function () {
+      var lives_input = document.getElementById('lives').value
+      var categories_input = document.getElementById('categories').value
+      if (categories_input == 0) {
+        chosenCategory = question.categories[(categories_input)];
+      } else if (categories_input == 1) {
+        chosenCategory = question.categories[(categories_input)];
+
+      }
       
-      chosenCategory = question.categories[Math.floor(Math.random() * question.categories.length)];
+      else {
+          chosenCategory = question.categories[Math.floor(Math.random() * question.categories.length)];
+
+      }
       word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)]; // result
       word = word.replace(/\s/g, "-");
       console.log(word);
       var playerNameInput = document.getElementById('playerName').value
       player.set_username = playerNameInput
       buttons();
-      player.lives = 10; // Player lives
+      if (lives_input == '') {
+        player.lives = 10 // default lives
+      }
+      else {
+        player.lives = lives_input; // Player lives
+      }
       userename = player.userename
       console.log(userename)
       lives = player.lives;
