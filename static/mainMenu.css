@@ -10,7 +10,21 @@ body {
   color: black;
 }
 
-  
+  .input-text {
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: var(--color1);
+    border-bottom: 2px solid var(--color4);
+    transition: box-shadow 0.5s;
+  }
+  .input-text:focus {
+    outline: none;
+    border-bottom: 2px solid;
+
+    box-shadow: 5px 5px 10px -6px var(--color4);
+    border-color: var(--color4);
+  }
 
   .mainButton {
     background-color: var(--color4)!important;

@@ -2,20 +2,28 @@
 {% block title %}
 <title>Select Character - Hangman</title>
 <link rel="stylesheet" href="/static/mainMenu.css">
-
+<style>
+    .box-content {
+        padding: 35px;
+        background-color: var(--color1);
+        box-shadow: 12px 12px 12px 12px black;
+        opacity: 1;
+    }
+</style>
 {% endblock %}
+
 {% block body %}
 <div class="container mt-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center box-content">
         <div class="col-5 p-3">
-            <form action="" method="POST" class="form-control p-4">
+            <form action="" method="POST" class="p-4">
                 <div class="row">
                     <div class="col p-3">
                         <label for="">Name: </label>
 
                         <div class="row">
                             <div class="col">
-                                <input type="text" name="username" required class="form-control mt-3">
+                                <input type="text" name="username" required class="input-text mt-3">
 
 
                             </div>
@@ -51,7 +59,7 @@
                     <div class="row">
                         <div class="col text-center">
                             <div class="d-grid gap-2">
-                                <input type="submit" class="btn btn-lg mainButton" value="Play">
+                                <input type="submit" class="btn btn-lg" value="Play">
 
                             </div>
 

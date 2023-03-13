@@ -5,7 +5,16 @@
     --color4: #71C9CE;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .box-content {
     padding: 35px;
-    background-color: var(--color3);
+    background-color: var(--color1);
+    box-shadow: 12px 12px 12px 12px black;
+    opacity: 1;
 }
