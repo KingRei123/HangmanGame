@@ -1,89 +1,85 @@
-.button {
-    display: block;
-    background-color: #ED9B40!important;
-    color: white;
-    padding: 10px 20px;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #3e8e41;
-  }
+:root {
+  --color1: #E3FDFD;
+  --color2: #CBF1F5;
+  --color3: #A6E3E9;
+  --color4: #71C9CE;
+}
+
+body {
+  background-color: var(--color3);
+  color: black;
+}
+
   
 
   .mainButton {
-    background-color: #ED9B40;
+    background-color: var(--color4)!important;
     color: white;
     box-shadow: 2px 2px 2px black;
   }
   
   .mainButton:hover {
-    background-color: #C7802F;
-    color: white;
+    background-color: var(--color1)!important;
+    color: var(--color4);
     box-shadow: 3px 3px black;
 
-  }
-
-  .light-mode {
-    background-color: #FFEEDB;
-  }
-
-footer {
-    background-color: #f8dcbc ;
-    color: black;
-    position: absolute; 
-    bottom: 0px; 
-    width:100%;
   }
 
 
 .nametag {
   font-size: 12px;
-  background: #f5ece2;
+  background: var(--color4);
+  border-color: var(--color4)!important;
   margin-top: 100px!important;
-  box-shadow: 2px 2px 2px 2px;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius: 0.5rem;
+  color: white;
+
 }
 
 .nametag:hover {
-  background-color: #dac6b1;
+  background-color: var(--color1);
+  color: var(--color4);
   cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+
 }
 
 .nametag-big {
   position: absolute;
-  padding: 10px;
-  top: 200px;
-  z-index: 2;
-  max-width: 500px;
-  max-height: 400px;
-  background-color: #f5ece2;
-  box-shadow: 2px 2px 2px;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  background-color: var(--color4);
+  color: white;
+  min-width: 100px;
+  min-height: 100px;
+  box-shadow: 2px black;
+  border-radius: 0.5rem;
 
-}
-
-.nametag-big:hover {
-  background-color: #dac6b1;
-  cursor: pointer;
 }
 
 .shadow-box {
   width: 100%;
   position: absolute;
-  height: 60em;
+  height: 100vh;
   padding-top: 0;
-  background-color: rgb(100, 92, 92);
-  opacity: 0.78;
+  background-color: var(--color1);
+  opacity: 0.87;
   z-index: 1;
 }
 
 #about-card {
   position: absolute;
-  top: 200px;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
   z-index: 1;
-  background-color: white;
-  width: 100px;
+  color: var(--color1);
+  background-color: var(--color4);
+  border-radius: 0.5rem;
+  min-width: 100px;
+  min-height: 100px;
 }

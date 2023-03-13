@@ -1,10 +1,16 @@
-
 /* Variabes */
+:root {
+  --color1: #E3FDFD;
+  --color2: #CBF1F5;
+  --color3: #A6E3E9;
+  --color4: #71C9CE;
+}
 /* Mixin's */
 body {
-  background: #FFEEDB;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
-    Arial, "Lucida Grande", sans-serif;
+  background: var(--color3);
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+  margin: 0;
+  padding: 0;
   color: rgb(12, 11, 11);
   height: 100%;
   text-align: center;
@@ -60,7 +66,7 @@ p {
   width: 40px;
   height: 35px;
   background: #fff;
-  color: #C7802F;
+  color: var(--color4);
   cursor: pointer;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -69,9 +75,9 @@ p {
   border: solid 1px #fff;
 }
 #alphabet li:hover {
-  background: #f5b469;
-  border: solid 1px #fff;
-  color: black;
+  background: var(--color4);
+  border: solid 1px var(--color1);
+  color: var(--color1);
 }
 #my-word {
   margin: 0;
@@ -115,9 +121,9 @@ button {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -khtml-border-radius: 5px;
-  background: #ED9B40;
-  color: black;
-  border: solid 1px #fff;
+  background: var(--color4);
+  color:var(--color1);
+  border: var(--color4);
   text-decoration: none;
   cursor: pointer;
   font-size: 1.2em;
@@ -127,11 +133,10 @@ button {
   outline: none;
 }
 button:hover {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background: #C7802F;
-  border: solid 1px #fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: var(--color1);
+  border: solid 1px var(--color1);
+  color: var(--color4);
 
 }
 a {
