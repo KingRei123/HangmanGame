@@ -10,14 +10,17 @@ window.onload = function () {
         // Animal Hints
         ["Big grey animal with long nose", "Black and white horses", "Small modern T-Rex", "1890's car", "Giant great white"],
         // Food Hinst
-        ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish"]
+        ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish", 'Indoensian Salad'],
+        ['Computer instrument', 'Small guitar with 4 strings', 'Grand classic instrument', 'Instrument for everybody', 'Squidwards favorite instrument']
       ],
 
       categories: [
          // Animal Category
          ["elephant", "zebra", "chicken", "horse", "shark"],
          // Food Category
-         ["indomie", "pizza", "ramen", "samyang", "salad"]
+         ["indomie", "pizza", "ramen", "samyang", "salad",'gado gado'],
+         // Instrument Category
+         ['keyboard', 'violin', 'piano', 'guitar', 'drum', "clarinet"]
       ],
 
       get_hints: function(i) {
@@ -100,6 +103,8 @@ window.onload = function () {
         catagoryName.innerHTML = "The Chosen Category Is Animals";
       } else if (chosenCategory === question.categories[1]) {
         catagoryName.innerHTML = "The Chosen Category Is Food";
+      } else if (chosenCategory === question.categories[2]) {
+        catagoryName.innerHTML = "The Chosen Category is Instruments";
       }
     }
   
@@ -175,8 +180,8 @@ window.onload = function () {
       myStickman = document.getElementById("stickman");
       context = myStickman.getContext('2d');
       context.beginPath();
-      context.strokeStyle = "#fff";
-      context.lineWidth = 2;
+      context.strokeStyle = "black";
+      context.lineWidth = 4;
     };
     
       head = function(){
@@ -273,6 +278,8 @@ window.onload = function () {
       } else if (categories_input == 1) {
         chosenCategory = question.categories[(categories_input)];
 
+      } else if (categories_input == 2) {
+        chosenCategory = question.categories[(categories_input)];
       }
       
       else {
