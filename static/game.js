@@ -9,8 +9,9 @@ window.onload = function () {
       hints: [
         // Animal Hints
         ["Big grey animal with long nose", "Black and white horses", "Small modern T-Rex", "1890's car", "Giant great white"],
-        // Food Hinst
+        // Food Hints
         ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish", 'Indoensian Salad'],
+        // Instrument Hints
         ['Computer instrument', 'Small guitar with 4 strings', 'Grand classic instrument', 'Instrument for everybody', 'Squidwards favorite instrument']
       ],
 
@@ -88,6 +89,7 @@ window.onload = function () {
       for (var i = 0; i < alphabet.length; i++) {
         letters.id = 'alphabet';
         list = document.createElement('li');
+        list.setAttribute('class', 'btn')
         list.id = 'letter';
         list.innerHTML = alphabet[i];
         check();

@@ -20,6 +20,8 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
+
 .wrappper:after {
   content: "";
   display: table;
@@ -78,6 +80,8 @@ p {
   background: var(--color4);
   border: solid 1px var(--color1);
   color: var(--color1);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
 }
 #my-word {
   margin: 0;

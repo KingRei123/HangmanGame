@@ -3,6 +3,7 @@
   --color2: #CBF1F5;
   --color3: #A6E3E9;
   --color4: #71C9CE;
+  --color5: #5b9da1;
 }
 
 body {
@@ -78,7 +79,7 @@ body {
 .shadow-box {
   width: 100%;
   position: absolute;
-  height: 100vh;
+  height: 150vh;
   padding-top: 0;
   background-color: var(--color1);
   opacity: 0.87;
@@ -96,4 +97,15 @@ body {
   border-radius: 0.5rem;
   min-width: 100px;
   min-height: 100px;
+}
+
+.playButton {
+  background-color: var(--color4)!important;
+  color: white;
+  box-shadow: 2px 2px 2px black;
+}
+.playButton:hover {
+  background-color: var(--color5)!important;
+  color: white;
+  box-shadow: 2px 2px 2px black;
 }
