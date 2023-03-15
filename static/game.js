@@ -12,7 +12,9 @@ window.onload = function () {
         // Food Hints
         ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish", 'Indoensian Salad'],
         // Instrument Hints
-        ['Computer instrument', 'Small guitar with 4 strings', 'Grand classic instrument', 'Instrument for everybody', 'Squidwards favorite instrument']
+        ['Computer instrument', 'Small guitar with 4 strings', 'Grand classic instrument', 'Instrument for everybody', 'Squidwards favorite instrument'],
+        // Jobs Hints
+        ["catch criminals", "Plane driver", "heal people", "Extuingish the fire", "Fix a machine", "Experiment often"],
       ],
 
       categories: [
@@ -21,7 +23,9 @@ window.onload = function () {
          // Food Category
          ["indomie", "pizza", "ramen", "samyang", "salad",'gado gado'],
          // Instrument Category
-         ['keyboard', 'violin', 'piano', 'guitar', 'drum', "clarinet"]
+         ['keyboard', 'violin', 'piano', 'guitar', 'drum', "clarinet"],
+         // Jobs Categories
+         ["police", "pilot", "doctor", "firefighter", "mechanic", "scientist"]
       ],
 
       get_hints: function(i) {
@@ -107,6 +111,8 @@ window.onload = function () {
         catagoryName.innerHTML = "The Chosen Category Is Food";
       } else if (chosenCategory === question.categories[2]) {
         catagoryName.innerHTML = "The Chosen Category is Instruments";
+      } else if (chosenCategory === question.categories[3]) {
+        catagoryName.innerHTML = "The Chosen Category is Jobs";
       }
     }
   
@@ -281,6 +287,8 @@ window.onload = function () {
         chosenCategory = question.categories[(categories_input)];
 
       } else if (categories_input == 2) {
+        chosenCategory = question.categories[(categories_input)];
+      } else if (categories_input == 3) {
         chosenCategory = question.categories[(categories_input)];
       }
       
