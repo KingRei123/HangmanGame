@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-18T05:23:26.994Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="c7Y7aasIsBEMjbmr0FCf" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-18T05:25:11.894Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="baG9PrjOXRnrQPkKdfmK" version="21.0.6" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="2295" dy="935" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="1148" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -223,7 +223,7 @@
         <mxCell id="_dYFzU9TArgMgV9j6ooU-42" value="13. Check if game is over" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="540" y="780" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_dYFzU9TArgMgV9j6ooU-49" value="Alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+        <mxCell id="_dYFzU9TArgMgV9j6ooU-49" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Alt&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
           <mxGeometry x="185" y="810" width="830" height="330" as="geometry" />
         </mxCell>
         <mxCell id="_dYFzU9TArgMgV9j6ooU-51" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=1.001;entryY=0.447;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.456;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="_dYFzU9TArgMgV9j6ooU-49" target="_dYFzU9TArgMgV9j6ooU-49">
@@ -298,6 +298,12 @@
         </mxCell>
         <mxCell id="_dYFzU9TArgMgV9j6ooU-71" value="16. Repeat until game over" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="10" y="1040" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_dYFzU9TArgMgV9j6ooU-72" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;[ If ]&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="827" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_dYFzU9TArgMgV9j6ooU-73" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;[ Else ]&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="245" y="980" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
