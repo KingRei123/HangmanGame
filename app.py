@@ -1,9 +1,9 @@
 from flask import Flask, render_template, redirect, request, url_for
-import hashlib
 
 app = Flask(__name__)
 app.secret_key = '123'
 app.debug = True
+
 
 
 

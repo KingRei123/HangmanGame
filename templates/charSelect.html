@@ -15,7 +15,7 @@
 {% block body %}
 <div class="container mt-5">
     <div class="container text-center">
-        <p class="display-4 pb-3">Character Select</p>
+        <p class="display-4 pb-3">What's Your Name?</p>
     </div>
     <div class="row justify-content-center box-content">
         <div class="col-5 p-3">
@@ -35,29 +35,7 @@
 
                     </div>
                 </div>
-                <div class="col">
-                    <label for="">Character Type: </label>
-                    <div class="container">
-                        <div class="row m-3">
-                            <div class="col">
-                                <img src="/static/assets/male.jpeg" alt="Male" style="width: 180px; height: 200px;">
-                                <input type="radio" name="gender" value="Male">
 
-                            </div>
-                            <div class="col">
-                                <img src="/static/assets/female.jpeg" alt="Female" style="width: 180px; height:200px;">
-                                <input type="radio" name="gender" value="Female">
-
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
                 <div class="container mt-5">
                     <div class="row">
                         <div class="col text-center">
@@ -77,7 +55,7 @@
                 {% if categories %}
                 <input type="number" name="categories" value="{{categories}}" hidden>
                 {% else %}
-                <input type="number" name="categories" value="3" hidden>
+                <input type="number" name="categories" value="4" hidden>
 
                 {% endif %}
             </form>

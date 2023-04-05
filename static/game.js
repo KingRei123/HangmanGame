@@ -291,7 +291,6 @@ window.onload = function () {
       } else if (categories_input == 3) {
         chosenCategory = question.categories[(categories_input)];
       }
-      
       else {
           chosenCategory = question.categories[Math.floor(Math.random() * question.categories.length)];
 

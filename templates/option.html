@@ -12,14 +12,18 @@
         </div>
         <div class="col"><input type="number" name="lives" class="input-text" value="10" /></div>
       </div>
-      <select class="form-select mt-3 mb-3" aria-label=" Default select example" name="categories">
-        <option selected>Change Categories</option>
-        <option value="0">Animal</option>
-        <option value="1">Food</option>
-        <option value="2">Instruments</option>
-        <option value="3">Jobs</option>
-        <option value="4">Random</option>
-      </select>
+      <div class="container">
+        <label for="select">Select Categories</label>
+        <select class="form-select mt-3 mb-3" aria-label=" Default select example" name="categories">
+          <option value="0">Animal</option>
+          <option value="1">Food</option>
+          <option value="2">Instruments</option>
+          <option value="3">Jobs</option>
+          <option value="4" selected>Random</option>
+        </select>
+
+      </div>
+
       <div class="text-center p-3">
         <input type="submit" value="Save Setting" class="btn playButton" />
       </div>
