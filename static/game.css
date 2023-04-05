@@ -120,6 +120,14 @@ p {
   text-align: center;
   display: block;
 }
+
+#condition {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
+  color: blue;
+
+}
 button {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;

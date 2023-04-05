@@ -82,6 +82,7 @@ window.onload = function () {
     var showCatagory = document.getElementById("scatagory");
     var getHint = document.getElementById("hint");
     var showClue = document.getElementById("clue");
+    var gameConditionTag = document.getElementById('condition');
   
   
   
@@ -162,7 +163,7 @@ window.onload = function () {
       // show lives
       for (var i = 0; i < geusses.length; i++) {
         if (counter + space === geusses.length) {
-          showLives.innerHTML = "You Win!";
+          gameConditionTag.innerHTML = "You Win!";
           checkWin = true;
           removeKeyboard();
           
