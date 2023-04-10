@@ -10,9 +10,9 @@ window.onload = function () {
         // Animal Hints
         ["Big grey animal with long nose", "Black and white horses", "Small modern T-Rex", "1890's car", "Giant great white"],
         // Food Hints
-        ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish", 'Indoensian Salad'],
+        ["Indonesian instant noodle", "Italian most popular food", "Japanese Noodle", "Korean Noodle", "Healthy western breakfast dish", "Indoensian Salad"],
         // Instrument Hints
-        ['Computer instrument', 'Small guitar with 4 strings', 'Grand classic instrument', 'Instrument for everybody', 'Squidwards favorite instrument'],
+        ['Computer instrument', 'Small guitar with 4 strings', 'Grand classic instrument', 'Instrument for everybody', 'Instrument that uses 2 sticks' ,'Squidwards favorite instrument'],
         // Jobs Hints
         ["catch criminals", "Plane driver", "heal people", "Extuingish the fire", "Fix a machine", "Experiment often"],
       ],
@@ -21,7 +21,7 @@ window.onload = function () {
          // Animal Category
          ["elephant", "zebra", "chicken", "horse", "shark"],
          // Food Category
-         ["indomie", "pizza", "ramen", "samyang", "salad",'gado gado'],
+         ["indomie", "pizza", "ramen", "samyang", "salad","gado gado"],
          // Instrument Category
          ['keyboard', 'violin', 'piano', 'guitar', 'drum', "clarinet"],
          // Jobs Categories
@@ -141,7 +141,7 @@ window.onload = function () {
     
     // Show lives
      comments = function () {
-      
+      showLives.style.color = 'black';
       showLives.innerHTML = "You have " + player.lives + " lives";
       if (player.lives < 1) {
         showLives.style.color = "red";
