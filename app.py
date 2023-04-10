@@ -1,9 +1,11 @@
 from flask import Flask, render_template, redirect, request, url_for
+from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
 app.secret_key = '123'
 app.debug = True
 
+toolbar = DebugToolbarExtension(app)
 
 
 

@@ -141,9 +141,11 @@ window.onload = function () {
     
     // Show lives
      comments = function () {
+      
       showLives.innerHTML = "You have " + player.lives + " lives";
       if (player.lives < 1) {
-        showLives.innerHTML = "Game Over";
+        showLives.style.color = "red";
+        showLives.innerHTML = "You Lose!!!";
         checkWin = false;
          for (var i = 0; i < word.length; i++) {
            correct.removeChild(correct.firstElementChild)
@@ -169,6 +171,8 @@ window.onload = function () {
           
           
        } else {
+        gameConditionTag.innerHTML = "";
+
         
        }
 
